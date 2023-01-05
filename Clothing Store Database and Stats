@@ -1,0 +1,30 @@
+--Create a clothing store
+
+create table Store (id integer primary key, Clothes TEXT, Size integer,color text, Asile integer, Price integer);
+
+insert into Store Values(1, 'T-Shirt', 'M', 'Blue', 1, 6),
+(2,'Collard Shirt', 'M', 'Black', 1, 10),
+(3,'V-neck','S',"White", 2, 5),
+(4,'pants', 'L','blue',3, 15),
+(5,'jeans','L',"blue",3, 13),
+(6,'suite','M','gray',4,100),
+(7,'boxers','M','red',5,7),
+(8,'socks','L','white',5,3),
+(9,'Dress Socks','m','gray',5,6),
+(10,'Long Sleve Shirt','L','red',2,9),
+(11,"dress",'s','yellow',6,12),
+(12,'leggings','m','black',6,10),
+(13,'spanx','s','tan',7,11),
+(14,'hats','m','red',7,15),
+(15,'glasses','s','blue',8,20)
+
+--Display database by price order
+SELECT * FROM Store 
+ORDER by price
+
+--what is the avg price of items in the S size? 
+SELECT avg(price) FROM Store WHERE size = 'S';
+
+-- 
+SELECT size,color,price From Store
+order by Price desc
